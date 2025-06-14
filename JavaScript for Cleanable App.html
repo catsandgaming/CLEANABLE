@@ -1,0 +1,33 @@
+// JavaScript for Cleanable App
+
+// This function runs when the entire page content is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Cleanable app page loaded!");
+
+    // Example: You could add interactivity here, like a smooth scroll
+    // for navigation links, or form submissions.
+
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Add click event listener to each link for a simple console log
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            // Prevent default link behavior if it's an internal hash link
+            // if (link.getAttribute('href').startsWith('#')) {
+            //     event.preventDefault();
+            //     const targetId = link.getAttribute('href').substring(1);
+            //     const targetElement = document.getElementById(targetId);
+            //     if (targetElement) {
+            //         targetElement.scrollIntoView({ behavior: 'smooth' });
+            //     }
+            // }
+            console.log(`Navigating to: ${link.textContent}`);
+        });
+    });
+
+    // You can add more complex JS here, for example:
+    // - Analytics tracking on download button clicks
+    // - Animations on scroll
+    // - Form validation
+});

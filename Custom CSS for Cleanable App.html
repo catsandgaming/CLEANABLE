@@ -1,0 +1,42 @@
+/* Custom CSS for Cleanable App */
+
+/* Ensure the font is applied */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Base styles for the app container */
+.app-container {
+    background-color: #f0f4f8; /* Light gray background */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* General container for content within main sections */
+.container {
+    max-width: 960px; /* Max width for content */
+}
+
+/* Download button animation */
+.download-button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Download button hover effects */
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styling for the app icon within the hero section */
+.hero-app-icon {
+    border-radius: 1.5rem; /* rounded-3xl in Tailwind */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-app-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
