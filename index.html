@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleanable - Your Personal Computer Cleaner</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Link to custom CSS file -->
-    <link href="style.css" rel="stylesheet">
-    <!-- Google Fonts: Inter for general text -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleanable - Your Personal Computer Cleaner</title>
+  
+  <!-- Favicon (browser tab icon) -->
+  <link rel="icon" type="image/png" href="images/buddy_icon.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body class="font-inter bg-gray-50 text-gray-800">
-    <div class="flex flex-col min-h-screen">
-        <!-- Header Section -->
-        <header class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white p-4 shadow-md">
-            <div class="container mx-auto flex justify-between items-center py-2">
-                <h1 class="text-4xl font-extrabold tracking-tight">
-                    <img src="uploaded:buddy_icon.png" alt="Cleanable Icon" class="h-10 inline-block mr-3 rounded-md">
-                    Cleanable
-                </h1>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="#" class="text-white hover:text-blue-200 text-lg transition-colors duration-200">Home</a></li>
-                        <li><a href="#" class="text-white hover:text-blue-200 text-lg transition-colors duration-200">Features</a></li>
-                        <li><a href="#" class="text-white hover:text-blue-200 text-lg transition-colors duration-200">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+  <div class="flex flex-col min-h-screen">
 
-        <!-- Hero Section -->
-        <main class="flex-grow flex items-center justify-center p-6 md:p-10">
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center container mx-auto max-w-4xl border border-gray-200">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-                    <!-- App Icon/Image -->
-                    <div class="flex-shrink-0">
-                        <img src="uploaded:buddy_icon.png-04ceec98-1a77-4aa2-a468-76d1ec3d1eec" alt="Cleanable App Icon" class="w-48 h-48 md:w-64 md:h-64 object-contain rounded-3xl shadow-lg ring-4 ring-blue-300 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    </div>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center py-2">
+        <h1 class="text-3xl font-extrabold tracking-tight flex items-center">
+          <img src="images/buddy_icon.png" alt="App Icon" class="h-10 w-10 mr-3 rounded-md" />
+          Cleanable
+        </h1>
+        <nav>
+          <ul class="flex space-x-6 text-lg">
+            <li><a href="#" class="hover:text-blue-200 transition">Home</a></li>
+            <li><a href="#" class="hover:text-blue-200 transition">Features</a></li>
+            <li><a href="#" class="hover:text-blue-200 transition">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-                    <!-- App Description and Download -->
-                    <div class="text-left md:text-center flex-grow">
-                        <h2 class="text-5xl font-extrabold text-blue-700 mb-5 leading-tight">
-                            Cleanable: <br class="md:hidden">Your Personal <span class="text-indigo-600">Junk File Cleaner</span>
-                        </h2>
-                        <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                            Tired of a cluttered and slow PC? Cleanable is a cute and efficient app designed to clean up unnecessary junk files, freeing up space and boosting your Windows desktop performance. Get ready for a sparkling clean computer!
-                        </p>
+    <!-- Hero Section -->
+    <main class="flex-grow flex items-center justify-center p-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center max-w-4xl border border-gray-200">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+          <!-- App Icon -->
+          <img src="images/buddy_icon.png" alt="Cleanable App Icon" class="w-48 h-48 md:w-64 md:h-64 object-contain rounded-3xl shadow-lg ring-4 ring-blue-300 hover:scale-105 transition-transform duration-300" />
 
-                        <!-- Download Button -->
-                        <a
-                            href="https://drive.usercontent.google.com/download?id=1S9rTiCFDOdPcqMcUr0MP-cIIeZhBRAuI&export=download&authuser=0"
-                            download="Cleanable_Setup.zip"
-                            class="download-button inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75 transition duration-300 ease-in-out transform hover:-translate-y-1"
-                        >
-                            <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
-                            Download Cleanable (Windows)
-                        </a>
-                        <p class="text-sm text-gray-500 mt-3">Version 1.0 - Approx. 5MB</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+          <!-- Description -->
+          <div class="text-left md:text-center">
+            <h2 class="text-4xl font-extrabold text-blue-700 mb-4">
+              Cleanable<br /><span class="text-indigo-600">Your Junk File Cleaner</span>
+            </h2>
+            <p class="text-gray-700 text-lg mb-6">
+              Tired of a slow, cluttered PC? Cleanable is a cute, fast, and efficient cleaner that removes junk files and boosts your desktop’s performance.
+            </p>
 
-        <!-- Footer Section -->
-        <footer class="bg-gray-800 text-white p-6 mt-8">
-            <div class="container mx-auto text-center text-gray-400">
-                &copy; 2024 Cleanable App. All rights reserved. | <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-            </div>
-        </footer>
-    </div>
+            <!-- Download Button -->
+            <a href="https://drive.usercontent.google.com/download?id=1S9rTiCFDOdPcqMcUr0MP-cIIeZhBRAuI&export=download&authuser=0" 
+              class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg transition hover:-translate-y-1"
+              download="Cleanable_Setup.zip">
+              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Cleanable
+            </a>
+            <p class="text-sm text-gray-500 mt-3">Version 1.0 · Approx. 5MB</p>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <!-- Link to custom JavaScript file -->
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 mt-8">
+      <div class="text-center text-gray-400">
+        &copy; 2024 Cleanable App. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Optional: Custom Script -->
+  <script src="script.js"></script>
 </body>
 </html>
