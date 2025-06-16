@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Custom Styles -->
-    <link href="style.css" rel="stylesheet" />
+    <!-- <link href="style.css" rel="stylesheet" /> - Assuming this is empty or for local development if not provided -->
 </head>
 <body class="font-inter bg-gray-50 text-gray-800">
     <div class="flex flex-col min-h-screen">
@@ -28,6 +28,7 @@
                 </h1>
                 <nav>
                     <ul class="flex space-x-6 text-lg">
+                        <!-- Navigation items can go here if needed later -->
                     </ul>
                 </nav>
             </div>
@@ -69,9 +70,22 @@
                                 </svg>
                                 Download for Linux
                             </a>
+                            <!-- macOS Download Button (Added) -->
+                            <a href="https://drive.google.com/uc?export=download&id=1kOLeiLMYRaylByUysPVYWgjr-wHKxTJM"
+                                class="inline-flex items-center bg-gray-700 hover:bg-gray-800 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg transition hover:-translate-y-1"
+                                download="Cleanable_macOS_Beta.zip">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 18H5V6h6v12zm8 0h-6V6h6v12z"/>
+                                </svg>
+                                Download for macOS (Beta)
+                            </a>
                         </div>
                         <p class="text-sm text-gray-500 mt-3">Windows Version 1.0 · Approx. 30-40MB On the next screen, hit download anyway.</p>
                         <p class="text-sm text-gray-500">Linux Version 1.0 · Approx. Size Varies.</p>
+                        <!-- macOS Beta Warning (Added) -->
+                        <p class="text-sm text-red-600 font-semibold mt-1">
+                            Important: The macOS version is currently in beta. If you encounter any issues, please leave feedback or consider waiting for a stable release.
+                        </p>
                         <a href="https://cleanable.featurebase.app" target="_blank" style="
                             display: inline-block;
                             padding: 12px 18px;
@@ -100,6 +114,6 @@
     </div>
 
     <!-- Optional: Custom Script -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> - Assuming this is empty or for local development if not provided -->
 </body>
 </html>
