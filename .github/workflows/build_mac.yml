@@ -27,4 +27,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyinstaller
-          pip install -r requi
+          pip install -r requirements.txt
+
+      - name: Build macOS app with PyInstaller
+        run: |
+          pyinstaller --windowed --name="Cleanable" --icon=buddy_icon.png buddy_app.py
+
+      - name: Zip the built app
+        run: |
+          cd dist
+          zip -r Cleanable.zip Cleanable.app
+
+      - name: Upload Cleanable.app artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleanable-macos-app
+          path: dist/Cleanable.zip
