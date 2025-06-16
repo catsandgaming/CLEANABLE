@@ -1,3 +1,10 @@
+jobs:
+  build:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: cleanable-macos
+
 name: Build macOS .app
 
 on:
