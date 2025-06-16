@@ -2,22 +2,17 @@ name: Build macOS .app
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
     runs-on: macos-latest
 
-    defaults:
-      run:
-        working-directory: cleanblemacos
-
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -25,20 +20,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller
-          pip install -r requirements.txt
+          pip install pyinstaller pillow
+          # Uncomment if you have requirements.txt
+          # pip install -r requirements.txt
 
-      - name: Build macOS app
+      - name: Build .app with PyInstaller
         run: |
-          pyinstaller --windowed --name="Cleanable" --icon=buddy_icon.png buddy_app.py
+          pyinstaller --windowed --name="Cleanable" --icon=buddy_icon.icns buddy_app.py
 
-      - name: Zip .app
+      - name: Zip the .app
         run: |
           cd dist
           zip -r Cleanable.zip Cleanable.app
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload .app as artifact
+        uses: actions/upload-artifact@v3
         with:
           name: cleanable-macos-app
-          path: cleanblemacos/dist/Cleanable.zip
+          path: dist/Cleanable.zip
