@@ -25,3 +25,9 @@ jobs:
       - name: Build with PyInstaller
         run: |
           pyinstaller --windowed --name="Cleanable" --icon=cleanable-macos/buddy_icon.icns buddy_app.py
+
+- name: Upload cleanable-macos build
+  uses: actions/upload-artifact@v3
+  with:
+    name: cleanable-macos
+    path: dist/Cleanable.app
